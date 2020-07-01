@@ -9,6 +9,16 @@
 # find the sum of the even-valued terms.
 #########################################################################################################
 
-number = 1
+number = 2
 previousNumber = 1
+sumOfEvenValuedTerms = 0
 
+while previousNumber < 4000000:
+	if number % 2 == 0:
+		sumOfEvenValuedTerms += number
+
+	tempNumber = number
+	number = number + previousNumber
+	previousNumber = tempNumber
+
+print(sumOfEvenValuedTerms)
