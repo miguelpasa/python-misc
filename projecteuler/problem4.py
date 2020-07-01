@@ -15,9 +15,13 @@ def isNumberAPalindrome(number):
 			return bool(False)
 	return bool(True)
 
-print(isNumberAPalindrome(10222224201))
+largestNumberSoFar = 0
+for firstThreeDigitNumber in range (100, 1000, 1):
+	for secondThreeDigitNumber in range (100, 1000, 1):
+		product = firstThreeDigitNumber*secondThreeDigitNumber
+		if isNumberAPalindrome(product):
+			if product > largestNumberSoFar:
+				largestNumberSoFar = product
+				print(firstThreeDigitNumber, " * ", secondThreeDigitNumber, " = ", firstThreeDigitNumber*secondThreeDigitNumber)
 
-for num in range (998001, 0, -1):
-	if isNumberAPalindrome(num):
-		print(num, " has been the largest so far")
-		exit()
+print(largestNumberSoFar)
