@@ -19,6 +19,3 @@ while(1):
 		break
 	counter = counter + 20
 exit()
-
-# for i in numberList:
-# 	print(i)
